@@ -1,24 +1,34 @@
 [
     {
-        "UpdateStageName": "Server File Download",
+        "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "GithubRelease",
-        "UpdateSourceData": "LunaMultiplayer-Server-Release.zip",
         "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UpdateSourceData": "LunaMultiplayer-Server-Release.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
-        "OneShot": false
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Extract",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceArgs": "./luna-multiplayer/LunaMultiplayer-Server-Release.zip",
-        "UpdateSourceTarget": "./luna-multiplayer",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "LunaMultiplayer/LunaMultiplayer",
+        "UpdateSourceData": "LunaMultiplayer-Server-linux-x64-Release.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
-        "OneShot": false
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd luna-multiplayer/serverfiles && if [ -d LMPServer-linux-x64 ]; then rm -rf LMPServer; mv LMPServer-linux-x64 LMPServer; fi && chmod +x LMPServer/Server\"",
+        "SkipOnFailure": false
     }
 ]
