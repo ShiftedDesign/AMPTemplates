@@ -8,7 +8,7 @@
         "FieldName": "$GamePort",
         "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "/ConnectionSettingsDefinition/Port",
+        "ParamFieldName": "$GamePort",
         "EnumValues": {}
     },
     {
@@ -19,7 +19,7 @@
         "Keywords": "listen,address,ip,bind",
         "FieldName": "ListenAddress",
         "InputType": "text",
-        "ParamFieldName": "/ConnectionSettingsDefinition/ListenAddress",
+        "ParamFieldName": "ListenAddress",
         "DefaultValue": "::",
         "EnumValues": {}
     },
@@ -31,7 +31,7 @@
         "Keywords": "upnp,port,forward",
         "FieldName": "Upnp",
         "InputType": "checkbox",
-        "ParamFieldName": "/ConnectionSettingsDefinition/Upnp",
+        "ParamFieldName": "Upnp",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -46,7 +46,7 @@
         "Keywords": "server,name",
         "FieldName": "ServerName",
         "InputType": "text",
-        "ParamFieldName": "/GeneralSettingsDefinition/ServerName",
+        "ParamFieldName": "ServerName",
         "DefaultValue": "AMP Powered Luna Server",
         "EnumValues": {}
     },
@@ -58,7 +58,7 @@
         "Keywords": "server,description",
         "FieldName": "Description",
         "InputType": "text",
-        "ParamFieldName": "/GeneralSettingsDefinition/Description",
+        "ParamFieldName": "Description",
         "DefaultValue": "AMP Powered Luna Multiplayer Server",
         "EnumValues": {}
     },
@@ -70,7 +70,7 @@
         "Keywords": "password,private",
         "FieldName": "Password",
         "InputType": "password",
-        "ParamFieldName": "/GeneralSettingsDefinition/Password",
+        "ParamFieldName": "Password",
         "DefaultValue": "",
         "EnumValues": {}
     },
@@ -82,7 +82,7 @@
         "Keywords": "admin,password",
         "FieldName": "$RemoteAdminPassword",
         "InputType": "password",
-        "ParamFieldName": "/GeneralSettingsDefinition/AdminPassword",
+        "ParamFieldName": "$RemoteAdminPassword",
         "DefaultValue": "",
         "EnumValues": {}
     },
@@ -95,7 +95,7 @@
         "FieldName": "$MaxUsers",
         "InputType": "number",
         "MinValue": "1",
-        "ParamFieldName": "/GeneralSettingsDefinition/MaxPlayers",
+        "ParamFieldName": "$MaxUsers",
         "DefaultValue": "8",
         "EnumValues": {}
     },
@@ -107,7 +107,7 @@
         "Keywords": "game,mode,sandbox,career,science",
         "FieldName": "GameMode",
         "InputType": "enum",
-        "ParamFieldName": "/GeneralSettingsDefinition/GameMode",
+        "ParamFieldName": "GameMode",
         "DefaultValue": "Sandbox",
         "EnumValues": {
             "Sandbox": "Sandbox",
@@ -123,7 +123,7 @@
         "Keywords": "difficulty",
         "FieldName": "GameDifficulty",
         "InputType": "enum",
-        "ParamFieldName": "/GeneralSettingsDefinition/GameDifficulty",
+        "ParamFieldName": "GameDifficulty",
         "DefaultValue": "Normal",
         "EnumValues": {
             "Easy": "Easy",
@@ -141,7 +141,7 @@
         "Keywords": "mod,control",
         "FieldName": "ModControl",
         "InputType": "checkbox",
-        "ParamFieldName": "/GeneralSettingsDefinition/ModControl",
+        "ParamFieldName": "ModControl",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -156,7 +156,7 @@
         "Keywords": "cheats",
         "FieldName": "Cheats",
         "InputType": "checkbox",
-        "ParamFieldName": "/GeneralSettingsDefinition/Cheats",
+        "ParamFieldName": "Cheats",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -171,7 +171,7 @@
         "Keywords": "motd,message",
         "FieldName": "ServerMotd",
         "InputType": "text",
-        "ParamFieldName": "/GeneralSettingsDefinition/ServerMotd",
+        "ParamFieldName": "ServerMotd",
         "DefaultValue": "Hi %Name%!\nWelcome to %ServerName%.\nOnline players: %PlayerCount%",
         "EnumValues": {}
     },
@@ -183,7 +183,7 @@
         "Keywords": "master,server,public,list",
         "FieldName": "RegisterWithMasterServer",
         "InputType": "checkbox",
-        "ParamFieldName": "/MasterServerSettingsDefinition/RegisterWithMasterServer",
+        "ParamFieldName": "RegisterWithMasterServer",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -198,7 +198,7 @@
         "Keywords": "rainbow,color,browser",
         "FieldName": "UseRainbowEffect",
         "InputType": "checkbox",
-        "ParamFieldName": "/DedicatedServerSettingsDefinition/UseRainbowEffect",
+        "ParamFieldName": "UseRainbowEffect",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -215,7 +215,7 @@
         "InputType": "number",
         "MinValue": "0",
         "MaxValue": "255",
-        "ParamFieldName": "/DedicatedServerSettingsDefinition/Red",
+        "ParamFieldName": "Red",
         "DefaultValue": "255",
         "EnumValues": {}
     },
@@ -229,7 +229,7 @@
         "InputType": "number",
         "MinValue": "0",
         "MaxValue": "255",
-        "ParamFieldName": "/DedicatedServerSettingsDefinition/Green",
+        "ParamFieldName": "Green",
         "DefaultValue": "0",
         "EnumValues": {}
     },
@@ -243,7 +243,7 @@
         "InputType": "number",
         "MinValue": "0",
         "MaxValue": "255",
-        "ParamFieldName": "/DedicatedServerSettingsDefinition/Blue",
+        "ParamFieldName": "Blue",
         "DefaultValue": "0",
         "EnumValues": {}
     }

@@ -30,5 +30,142 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd luna-multiplayer/serverfiles && if [ -d LMPServer-linux-x64 ]; then rm -rf LMPServer; mv LMPServer-linux-x64 LMPServer; fi && chmod +x LMPServer/Server\"",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Config Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}LMPServer/Config",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Connection Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-connectionsettings.xml",
+        "UpdateSourceArgs": "ConnectionSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "General Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-generalsettings.xml",
+        "UpdateSourceArgs": "GeneralSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Master Server Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-masterserversettings.xml",
+        "UpdateSourceArgs": "MasterServerSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Dedicated Server Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-dedicatedserversettings.xml",
+        "UpdateSourceArgs": "DedicatedServerSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Gameplay Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-gameplaysettings.xml",
+        "UpdateSourceArgs": "GameplaySettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Craft Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-craftsettings.xml",
+        "UpdateSourceArgs": "CraftSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Debug Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-debugsettings.xml",
+        "UpdateSourceArgs": "DebugSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Interval Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-intervalsettings.xml",
+        "UpdateSourceArgs": "IntervalSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "LMP Mod Control Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-lmpmodcontrol.xml",
+        "UpdateSourceArgs": "LMPModControl.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Log Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-logsettings.xml",
+        "UpdateSourceArgs": "LogSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Screenshot Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-screenshotsettings.xml",
+        "UpdateSourceArgs": "ScreenshotSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Warp Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-warpsettings.xml",
+        "UpdateSourceArgs": "WarpSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Website Settings Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/luna-multiplayerconfig-websitesettings.xml",
+        "UpdateSourceArgs": "WebsiteSettings.xml",
+        "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     }
 ]
