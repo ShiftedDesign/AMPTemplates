@@ -167,5 +167,21 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}LMPServer/Config/",
         "OverwriteExistingFiles": false,
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "AMP Config XML Normalization",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$dir = Join-Path (Get-Location) 'luna-multiplayer/serverfiles/LMPServer/Config'; if (-not (Test-Path $dir)) { exit 0 }; Get-ChildItem -Path $dir -Filter '*.xml' | ForEach-Object { $c = [IO.File]::ReadAllText($_.FullName); $n = $c -replace 'encoding=\\\"utf-16\\\"','encoding=\\\"utf-8\\\"'; $n = [regex]::Replace($n, '\\s+xmlns:xsi=\\\"[^\\\"]*\\\"\\s+xmlns:xsd=\\\"[^\\\"]*\\\"', ''); if ($n -ne $c) { [IO.File]::WriteAllText($_.FullName, $n, [Text.UTF8Encoding]::new($false)) } }\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "AMP Config XML Normalization",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd luna-multiplayer/serverfiles/LMPServer/Config 2>/dev/null || exit 0; for f in *.xml; do [ -f \\\"$f\\\" ] || continue; sed -i 's/encoding=\\\"utf-16\\\"/encoding=\\\"utf-8\\\"/' \\\"$f\\\"; sed -i 's/ xmlns:xsi=\\\"[^\\\"]*\\\" xmlns:xsd=\\\"[^\\\"]*\\\"//' \\\"$f\\\"; done\"",
+        "SkipOnFailure": true
     }
 ]

@@ -2,63 +2,25 @@
     {
         "ConfigFile": "LMPServer/Config/ConnectionSettings.xml",
         "ConfigType": "xml",
-        "Subsections": [
-            {
-                "Heading": "ConnectionSettingsDefinition",
-                "SettingMappings": {
-                    "ListenAddress": "ListenAddress",
-                    "Port": "$GamePort",
-                    "Upnp": "Upnp"
-                }
-            }
-        ]
+        "AutoMap": true,
+        "Importable": true
     },
     {
         "ConfigFile": "LMPServer/Config/GeneralSettings.xml",
         "ConfigType": "xml",
-        "Subsections": [
-            {
-                "Heading": "GeneralSettingsDefinition",
-                "SettingMappings": {
-                    "ServerName": "ServerName",
-                    "Description": "Description",
-                    "Password": "Password",
-                    "AdminPassword": "$RemoteAdminPassword",
-                    "MaxPlayers": "$MaxUsers",
-                    "GameMode": "GameMode",
-                    "GameDifficulty": "GameDifficulty",
-                    "ModControl": "ModControl",
-                    "Cheats": "Cheats",
-                    "ServerMotd": "ServerMotd"
-                }
-            }
-        ]
+        "AutoMap": true,
+        "Importable": true
     },
     {
         "ConfigFile": "LMPServer/Config/MasterServerSettings.xml",
         "ConfigType": "xml",
-        "Subsections": [
-            {
-                "Heading": "MasterServerSettingsDefinition",
-                "SettingMappings": {
-                    "RegisterWithMasterServer": "RegisterWithMasterServer"
-                }
-            }
-        ]
+        "AutoMap": true,
+        "Importable": true
     },
     {
         "ConfigFile": "LMPServer/Config/DedicatedServerSettings.xml",
         "ConfigType": "xml",
-        "Subsections": [
-            {
-                "Heading": "DedicatedServerSettingsDefinition",
-                "SettingMappings": {
-                    "UseRainbowEffect": "UseRainbowEffect",
-                    "Red": "Red",
-                    "Green": "Green",
-                    "Blue": "Blue"
-                }
-            }
-        ]
+        "AutoMap": true,
+        "Importable": true
     }
 ]
