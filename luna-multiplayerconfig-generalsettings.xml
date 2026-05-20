@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GeneralSettingsDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<GeneralSettingsDefinition>
   <!--Name of the server. Max 30 char-->
   <ServerName>Luna Server</ServerName>
   <!--Description of the server. Max 200 char-->

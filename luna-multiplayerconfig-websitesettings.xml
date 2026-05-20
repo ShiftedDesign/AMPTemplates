@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WebsiteSettingsDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<WebsiteSettingsDefinition>
   <!--Enable the website system that allows to retrieve server information in JSON format. You can get the data at http://YourIP:Port-->
   <EnableWebsite>true</EnableWebsite>
   <!--The address that the web server listens on. Falls back to ConnectionSettings.ListenAddress if unset, which defaults to [::]-->
