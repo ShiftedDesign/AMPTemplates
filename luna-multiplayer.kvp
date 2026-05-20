@@ -74,7 +74,7 @@ Meta.MetaConfigManifest=luna-multiplayermetaconfig.json
 Meta.ConfigRoot=luna-multiplayer.kvp
 App.RootDir=./luna-multiplayer/
 Meta.DisplayImageSource=url:https://github.com/LunaMultiplayer/LunaMultiplayer/blob/master/External/logo.png?raw=true
-App.BaseDirectory=./luna-multiplayer/serverfiles/LMPServer/
+App.BaseDirectory=./luna-multiplayer/serverfiles/
 App.WorkingDir=serverfiles/LMPServer
 App.ExecutableWin=serverfiles\LMPServer\Server.exe
 App.ExecutableLinux=serverfiles/LMPServer/Server
