@@ -1,1 +1,250 @@
-[]
+[
+    {
+        "DisplayName": "Game Port",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Connection:settings:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "/ConnectionSettingsDefinition/Port",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Listen Address",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Connection:settings:1",
+        "Description": "Address the server listens on. Use [::] for dual-stack IPv4/IPv6, or 0.0.0.0 for IPv4 only",
+        "Keywords": "listen,address,ip,bind",
+        "FieldName": "ListenAddress",
+        "InputType": "text",
+        "ParamFieldName": "/ConnectionSettingsDefinition/ListenAddress",
+        "DefaultValue": "::",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable UPnP",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Connection:settings:1",
+        "Description": "If enabled, the server tries to open the game port on the router using UPnP",
+        "Keywords": "upnp,port,forward",
+        "FieldName": "Upnp",
+        "InputType": "checkbox",
+        "ParamFieldName": "/ConnectionSettingsDefinition/Upnp",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Name shown in the server browser. Maximum 30 characters",
+        "Keywords": "server,name",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "/GeneralSettingsDefinition/ServerName",
+        "DefaultValue": "AMP Powered Luna Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Description",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Description shown in the server browser. Maximum 200 characters",
+        "Keywords": "server,description",
+        "FieldName": "Description",
+        "InputType": "text",
+        "ParamFieldName": "/GeneralSettingsDefinition/Description",
+        "DefaultValue": "AMP Powered Luna Multiplayer Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Password required to join the server. Leave empty for a public server. Maximum 30 characters",
+        "Keywords": "password,private",
+        "FieldName": "Password",
+        "InputType": "password",
+        "ParamFieldName": "/GeneralSettingsDefinition/Password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Password for in-game server administration from the KSP client. Leave empty to disable",
+        "Keywords": "admin,password",
+        "FieldName": "$RemoteAdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "/GeneralSettingsDefinition/AdminPassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Max Players",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Maximum number of players that can join the server",
+        "Keywords": "max,players,slots",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "/GeneralSettingsDefinition/MaxPlayers",
+        "DefaultValue": "8",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Game Mode",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Sets the server game mode",
+        "Keywords": "game,mode,sandbox,career,science",
+        "FieldName": "GameMode",
+        "InputType": "enum",
+        "ParamFieldName": "/GeneralSettingsDefinition/GameMode",
+        "DefaultValue": "Sandbox",
+        "EnumValues": {
+            "Sandbox": "Sandbox",
+            "Career": "Career",
+            "Science": "Science"
+        }
+    },
+    {
+        "DisplayName": "Game Difficulty",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Sets the gameplay difficulty",
+        "Keywords": "difficulty",
+        "FieldName": "GameDifficulty",
+        "InputType": "enum",
+        "ParamFieldName": "/GeneralSettingsDefinition/GameDifficulty",
+        "DefaultValue": "Normal",
+        "EnumValues": {
+            "Easy": "Easy",
+            "Normal": "Normal",
+            "Moderate": "Moderate",
+            "Hard": "Hard",
+            "Custom": "Custom"
+        }
+    },
+    {
+        "DisplayName": "Enable Mod Control",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "If enabled, clients must match the server's mod list. Only disable for private servers",
+        "Keywords": "mod,control",
+        "FieldName": "ModControl",
+        "InputType": "checkbox",
+        "ParamFieldName": "/GeneralSettingsDefinition/ModControl",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Enable Cheats",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "If enabled, cheats are allowed in-game",
+        "Keywords": "cheats",
+        "FieldName": "Cheats",
+        "InputType": "checkbox",
+        "ParamFieldName": "/GeneralSettingsDefinition/Cheats",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Server MOTD",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "General:dns:2",
+        "Description": "Message of the day. Supports %Name%, %ServerName%, and %PlayerCount%. Maximum 255 characters",
+        "Keywords": "motd,message",
+        "FieldName": "ServerMotd",
+        "InputType": "text",
+        "ParamFieldName": "/GeneralSettingsDefinition/ServerMotd",
+        "DefaultValue": "Hi %Name%!\nWelcome to %ServerName%.\nOnline players: %PlayerCount%",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Register With Master Server",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Master Server:public:3",
+        "Description": "If enabled, the server appears on the public Luna server list",
+        "Keywords": "master,server,public,list",
+        "FieldName": "RegisterWithMasterServer",
+        "InputType": "checkbox",
+        "ParamFieldName": "/MasterServerSettingsDefinition/RegisterWithMasterServer",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Use Rainbow Server Browser Effect",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Server Browser:palette:4",
+        "Description": "If enabled, the server entry uses a rainbow effect in the browser",
+        "Keywords": "rainbow,color,browser",
+        "FieldName": "UseRainbowEffect",
+        "InputType": "checkbox",
+        "ParamFieldName": "/DedicatedServerSettingsDefinition/UseRainbowEffect",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Server Browser Color (Red)",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Server Browser:palette:4",
+        "Description": "Red component of the server browser color (0-255). Used when rainbow effect is disabled",
+        "Keywords": "color,red",
+        "FieldName": "Red",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "255",
+        "ParamFieldName": "/DedicatedServerSettingsDefinition/Red",
+        "DefaultValue": "255",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Browser Color (Green)",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Server Browser:palette:4",
+        "Description": "Green component of the server browser color (0-255). Used when rainbow effect is disabled",
+        "Keywords": "color,green",
+        "FieldName": "Green",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "255",
+        "ParamFieldName": "/DedicatedServerSettingsDefinition/Green",
+        "DefaultValue": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Browser Color (Blue)",
+        "Category": "Luna Multiplayer:stadia_controller",
+        "Subcategory": "Server Browser:palette:4",
+        "Description": "Blue component of the server browser color (0-255). Used when rainbow effect is disabled",
+        "Keywords": "color,blue",
+        "FieldName": "Blue",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "255",
+        "ParamFieldName": "/DedicatedServerSettingsDefinition/Blue",
+        "DefaultValue": "0",
+        "EnumValues": {}
+    }
+]

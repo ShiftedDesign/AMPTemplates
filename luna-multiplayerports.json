@@ -4,6 +4,6 @@
         "Port": "8800",
         "Name": "",
         "Description": "Port used for main game traffic",
-        "Ref": ""
+        "Ref": "GamePort1"
     }
 ]
